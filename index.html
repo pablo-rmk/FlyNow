@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lux/bootstrap.min.css"
+        integrity="sha512-+TCHrZDlJaieLxYGAxpR5QgMae/jFXNkrc6sxxYsIVuo/28nknKtf9Qv+J2PqqPXj0vtZo9AKW/SMWXe8i/o6w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>FlyNow</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xs navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">FlyNow</a>
+            <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <div class="text-center py-5">
+        <div class="mt-5">
+            <h1>¿Adonde quieres ir?</h1>
+            <p class="w-25 mx-auto pt-2">Estás a sólo unos pasos de estar en el destino de tus sueños para tus
+                vacaciones. A continuación
+                cuéntanos adonde quieres ir.</p>
+        </div>
+        <div class="d-inline-block mt-4">
+            <h6>Origen: </h6>
+            <div class="me-3">
+                <div class="form-group mt-3">
+                    <select class="form-select" id="selectOrigen">
+                        <option value="0">Seleccione origen</option>
+                        <option value="1">New York, USA</option>
+                        <option value="2">Boston, USA</option>
+                        <option value="3">Paihuano, CL</option>
+                        <option value="4">Chicago, USA</option>
+                    </select>
+                </div>
+                <div class="form-group mt-4">
+                    <h6 class="mb-3">Fecha de ida: </h6>
+                    <input type="date" class="form-control restriccion" placeholder="Default input" min="" id="fechaIda">
+                </div>
+            </div>
+        </div>
+        <div class="d-inline-block">
+            <h6>Destino: </h6>
+            <div class="ms-3">
+                <div class="form-group mt-3">
+                    <select class="form-select" id="selectDestino">
+                        <option value="0">Seleccione destino</option>
+                        <option value="1">London, UK</option>
+                        <option value="2">Paris, FR</option>
+                        <option value="3">Venecia, IT</option>
+                        <option value="4">Detroit, RC</option>
+                    </select>
+                </div>
+                <div class="form-group mt-4">
+                    <h6 class="mb-3">Fecha de vuelta: </h6>
+                    <input type="date" class="form-control restriccion" placeholder="Default input" min="" id="fechaVuelta">
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 py-5 mx-auto w-50 bg-secondary">
+            <div class="row">
+                <div class="col-12">
+                    <h1 style="margin-bottom:7.5vh;">Itinerario</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div id="contenidoUno" class="mx-auto">
+                        <span id="mostrarIda" class="badge bg-success rounded-1 bg-opacity-75"></span>
+                        <div class="lineaVertical mx-auto"></div>
+                        <p id="origen" class="mt-4"></p>
+                        <button class="btn btn-outline-secondary btn-sm rounded-1">Más Información</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="lineaVertical mx-auto mt-3"></div>
+                        <p id="escala" class="mt-5"></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="contenidoDos">
+                        <span id="mostrarVuelta" class="badge bg-info rounded-1 bg-opacity-75"></span>
+                        <div class="lineaVertical mx-auto"></div>
+                        <p id="destino" class="mt-4"></p>
+                        <button class="btn btn-outline-secondary  btn-sm rounded-1">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

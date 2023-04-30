@@ -1,0 +1,26 @@
+
+body{
+    background-color: rgb(241, 241, 241);
+}
+.lineaVertical {
+    width: 1px;
+    height: 50px;
+    border: 1px;
+    border-style:none dashed none none;
+    border-color: rgb(158, 158, 158);
+}
+
+#contenidoUno {
+    position:absolute;
+    margin-top: -1.2%;
+    left: 30%;
+}
+
+#contenidoDos {
+    position:absolute;
+    margin-top: -1.2%;
+    right: 30%;
+}
+
+
+
